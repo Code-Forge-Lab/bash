@@ -14,9 +14,9 @@ NC='\033[0m' # No Color
 # Array
 #index , value
 
-c=("Arduino" "https://github.com/Local-Experimental/Arduino.git"
-   "bash" "https://github.com/Local-Experimental/bash.git"
-   "SQL" "https://github.com/Local-Experimental/SQL.git"
+c=("Arduino" "https://github.com/Local-Lab-Forge/Arduino.git"
+   "bash" "https://github.com/Local-Lab-Forge/bash.git"
+   "SQL" "https://github.com/Local-Lab-Forge/SQL.git"
    "All" "Auto-Download"
    ); #array
 
