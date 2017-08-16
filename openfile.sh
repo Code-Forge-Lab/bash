@@ -7,36 +7,76 @@ games="Games/Mind/Minecraft_"
 minecraft="$home.minecraft/saves/"
 Job_Value="Jobs_Paying_Language.txt"
 
-test="/media/zilvinas/MAIN 8GB/root/MyFolder/Games/Mind/Minecraft_"
-    echo "Opening data flash"
 
-    echo "Open MAIN 8GB Dir"
-    echo "1) root"
-    echo "2) Stript"
-    echo "3) Games"
-    echo "4) Minecraft"
-    echo "5) Job_Value"
-    read input
-    if [ $input == 1 ];  then
-        echo "root"
-            xdg-open "${flashpath}";
-    elif [ $input == 2 ]; then
-        echo "Stript"
-            xdg-open "${flashpath}${sript}";
-    elif [ $input == 3 ]; then
-        echo "Games"
-            xdg-open "${flashpath}${games}"
-    elif [ $input == 4 ]; then
-        echo "Minecraft"
-            xdg-open "${minecraft}"
 
-    elif [ $input == 5 ]; then
-        echo "$Job_Value"
-            # xdg-open "${Job_Value}"
-            
-           gedit "${flashpath}${Job_Value}"
-                    
-      else
-               echo "Now you are not making any sence ?"
+clear
+
+#    .---------- constant part!
+#    vvvv vvvv-- the code from above
+RED='\033[0;31m'
+GREEN='\033[1;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[1;34m'
+WHITE='\033[1;37m'
+NC='\033[0m' # No Color
+
+
+
+# Array
+#index , value
+
+c=("Stript" "$flashpath/Script"
+   "Games" "$flashpath/Games/Mind/Minecraft_"
+   "minecraft" "$home/minecraft/saves/"
+
+   ); #array
+
+
+printf "Open folder.\n"
+
+ # show list
+
+ inc=0;  # position array
+ inv=1;  # Line Position
+ IFS=$'\n'       # make newlines the only separator ,
+ for i in  ./${c[@]};  do # array ${c[@]} with `all` command
+    inc=`expr $inc + 1 `
+      #Checnk if dividing  equal
+      if [[ `expr $inc %  2` == 1  ]];then
+
+                printf "${WHITE}$inv ${c[$inc-1]}\n"
+            inv=`expr $inv + 1`;
       fi
+ done
 
+
+# Read user input
+printf "Select Option: ${GREEN}"
+read input
+printf "${NC}"
+ # execute job
+       inc=0;  # position array
+       inv=1;  # Line Position
+       suc=0;  # success if find index
+       for i in  ./${c[@]};  do # array ${c[@]} with `all` command
+          inc=`expr $inc + 1 `
+            #Checnk if dividing  equal
+            if [[ `expr $inc %  2` == 1  &&  ! -z $input  ]];then
+
+                  if [  $inv == $input  ];then # if find input index then execute git push
+                      printf "${GREEN}$inv${WHITE}--> ${YELLOW}$i ${RED} PATH ${BLUE}${c[$inc]}${NC}\n"
+                      xdg-open "${c[$inc]}"
+                      suc=1;
+                  fi
+                  inv=`expr $inv + 1`;
+            fi
+       done
+
+
+       if [  $suc  == 1  ];then
+            printf "${RED}Complete${NC}: "
+       elif  [[   ! -z $input && $input -gt $inv ]];then
+          printf "${RED}Not [${GREEN}$input${RED}] found.${NC}\n"
+       else
+            printf "${RED}No rezult!${NC}\n "
+       fi
