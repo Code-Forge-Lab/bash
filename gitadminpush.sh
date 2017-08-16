@@ -54,7 +54,7 @@ printf "${NC}"
 
                   if [  $inv == $input  ];then # if find input index then execute git push
                       printf "${GREEN}$inv${WHITE}--> ${YELLOW}$i ${RED} URL ${BLUE}${c[$inc]}${NC}\n"
-                      # git clone ${c[$inc]}
+                       git clone ${c[$inc]}
                       suc=1;
                   fi
                   inv=`expr $inv + 1`;
