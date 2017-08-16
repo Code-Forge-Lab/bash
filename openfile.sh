@@ -1,11 +1,9 @@
 #!/bin/bash
 clear
+IFS=$'\n'       # Space merge activator for all for loops in script
 flashpath='/media/zilvinas/MAIN 8GB/root/MyFolder/'
 home="/home/zilvinas/"
-sript="Script"
-games="Games/Mind/Minecraft_"
-minecraft="$home.minecraft/saves/"
-Job_Value="Jobs_Paying_Language.txt"
+
 
 
 
@@ -27,7 +25,7 @@ NC='\033[0m' # No Color
 
 c=("Stript" "$flashpath/Script"
    "Games" "$flashpath/Games/Mind/Minecraft_"
-   "minecraft" "$home/minecraft/saves/"
+   "minecraft" "$home.minecraft/saves/"
 
    ); #array
 
@@ -38,8 +36,8 @@ printf "Open folder.\n"
 
  inc=0;  # position array
  inv=1;  # Line Position
- IFS=$'\n'       # make newlines the only separator ,
- for i in  ./${c[@]};  do # array ${c[@]} with `all` command
+
+ for i in  ${c[@]};  do # array ${c[@]} with `all` command
     inc=`expr $inc + 1 `
       #Checnk if dividing  equal
       if [[ `expr $inc %  2` == 1  ]];then
@@ -58,7 +56,7 @@ printf "${NC}"
        inc=0;  # position array
        inv=1;  # Line Position
        suc=0;  # success if find index
-       for i in  ./${c[@]};  do # array ${c[@]} with `all` command
+       for i in  ${c[@]};  do # array ${c[@]} with `all` command
           inc=`expr $inc + 1 `
             #Checnk if dividing  equal
             if [[ `expr $inc %  2` == 1  &&  ! -z $input  ]];then

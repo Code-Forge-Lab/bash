@@ -1,4 +1,5 @@
 clear
+IFS=$'\n'       # Space merge activator for all for loops in script
 
 #    .---------- constant part!
 #    vvvv vvvv-- the code from above
@@ -8,7 +9,6 @@ YELLOW='\033[1;33m'
 BLUE='\033[1;34m'
 WHITE='\033[1;37m'
 NC='\033[0m' # No Color
-
 
 
 # Array
@@ -46,6 +46,7 @@ printf "${NC}"
        inc=0;  # position array
        inv=1;  # Line Position
        suc=0;  # success if find index
+
        for i in  ${c[@]};  do # array ${c[@]} with `all` command
           inc=`expr $inc + 1 `
             #Checnk if dividing  equal
@@ -53,7 +54,7 @@ printf "${NC}"
 
                   if [  $inv == $input  ];then # if find input index then execute git push
                       printf "${GREEN}$inv${WHITE}--> ${YELLOW}$i ${RED} URL ${BLUE}${c[$inc]}${NC}\n"
-                      git clone ${c[$inc]}
+                      # git clone ${c[$inc]}
                       suc=1;
                   fi
                   inv=`expr $inv + 1`;
