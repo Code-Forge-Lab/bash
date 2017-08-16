@@ -11,7 +11,7 @@ NC='\033[0m' # No Color
 printf "${RED}Start pushing process${NC}--->"
 git init
 git config user.name "Zilvinus-Peciulis"
-git config user.email "zilvinus.peciulis@gmail.com"
+#git config user.email ""
 git status
 git add .
 git commit -m "new"
