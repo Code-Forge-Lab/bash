@@ -1,4 +1,5 @@
 clear
+#2017-08-16
 IFS=$'\n'       # Space merge activator for all for loops in script
 
 #    .---------- constant part!
