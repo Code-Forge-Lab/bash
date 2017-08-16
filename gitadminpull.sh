@@ -14,9 +14,9 @@ NC='\033[0m' # No Color
 # Array
 #index , value
 
-c=("Arduino" "https://github.com/Local-Lab-Forge/Arduino.git"
-   "bash" "https://github.com/Local-Lab-Forge/bash.git"
-   "SQL" "https://github.com/Local-Lab-Forge/SQL.git"
+c=("Arduino" "https://github.com/Code-Forge-Lab/Arduino.git"
+   "bash" "https://github.com/Code-Forge-Lab/bash.git"
+   "SQL" "https://github.com/Code-Forge-Lab/SQL.git"
    "All" "Auto-Download"
    ); #array
 
@@ -51,15 +51,39 @@ printf "${NC}"
           inc=`expr $inc + 1 `
             #Checnk if dividing  equal
             if [[ `expr $inc %  2` == 1  &&  ! -z $input  ]];then
-
-                  if [  $inv == $input  ];then # if find input index then execute git push
+               #                             Ignore Last One
+                  if [[  $inv == $input  &&  `expr ${#c[@]} - 1 ` != $inc ]];then # if find input index then execute git push
                       printf "${GREEN}$inv${WHITE}--> ${YELLOW}$i ${RED} URL ${BLUE}${c[$inc]}${NC}\n"
                        git clone ${c[$inc]}
                       suc=1;
                   fi
                   inv=`expr $inv + 1`;
             fi
+
+
+             # download all
+              if [ `expr ${#c[@]} - 1 ` == $inc ];then # Accept Last One
+                    printf "\n${RED}${c[$inc]} ${NC} \n"
+
+
+                     inc1=0;  # position array
+                     inv1=1;  # Line Position
+                     for i in  ${c[@]};  do # array ${c[@]} with `all` command
+                        inc1=`expr $inc1 + 1 `
+                          #Checnk if dividing  equal
+                          if [[ `expr $inc1 %  2` == 1  && `expr ${#c[@]} - 1 ` -gt $inc1  ]];then
+
+                                     printf "\n${WHITE}${c[$inc1-1]}\n\n${NC}"
+                                          git clone ${c[$inc1]}
+                                inv1=`expr $inv1 + 1`;
+                          fi
+
+                     done
+
+                    suc=1;
+              fi # End of Accept Last One
        done
+
 
 
        if [  $suc  == 1  ];then
