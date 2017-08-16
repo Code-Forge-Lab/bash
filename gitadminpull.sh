@@ -62,7 +62,7 @@ printf "${NC}"
 
 
              # download all
-              if [ `expr ${#c[@]} - 1 ` == $inc ];then # Accept Last One
+              if [[ `expr ${#c[@]} - 1 ` == $inc && `expr $inv - 1` == $input ]];then # Accept Last One
                     printf "\n${RED}${c[$inc]} ${NC} \n"
 
 
