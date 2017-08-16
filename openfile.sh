@@ -7,7 +7,7 @@ games="Games/Mind/Minecraft_"
 minecraft="$home.minecraft/saves/"
 Job_Value="Jobs_Paying_Language.txt"
 
-test="/media/zilvinas/MAIN 8GB/root/MyFolder/Games/Mind/Minecraft_"
+
     echo "Opening data flash"
 
     echo "Open MAIN 8GB Dir"
