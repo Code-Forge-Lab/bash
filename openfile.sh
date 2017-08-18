@@ -23,7 +23,9 @@ NC='\033[0m' # No Color
 # Array
 #index , value
 
-c=("Stript" "$flashpath/Script"
+c=("Main" "$flashpath"
+   "Stript" "$flashpath/Script"
+   "Electronic" "$flashpath/Electronic/Old-New"
    "Games" "$flashpath/Games/Mind/Minecraft_"
    "minecraft" "$home.minecraft/saves/"
 
