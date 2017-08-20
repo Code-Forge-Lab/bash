@@ -11,11 +11,11 @@ LBLUE='\033[1;34m'
 NC='\033[0m' # No Color
 
 #/home/zilvinas/.minecraft/saves/Sesion\ 1\ Survive\ Age
-#/#"Sesion 1 Survive Age"
+#/#"HopSkyBlock"
 
 path_copy="/home/zilvinas/.minecraft/saves/" # path of game BACKUP indexfile copy
-path_paste="/home/zilvinas/.minecraft/saves/BACKUPS/Sesion 1 Survive Age__2/" # path of game BACKUP indexfile
-coppySave="Sesion 1 Survive Age"
+path_paste="/home/zilvinas/.minecraft/BACKUP_SAVE/SKYBLOCK/" # path of game BACKUP indexfile
+coppySave="HopSkyBlock"
 
 
 indexfile="index.txt" #File that count last saved folder
