@@ -18,6 +18,7 @@ NC='\033[0m' # No Color
 c=("Arduino" "https://github.com/Code-Forge-Lab/Arduino.git"
    "bash" "https://github.com/Code-Forge-Lab/bash.git"
    "SQL" "https://github.com/Code-Forge-Lab/SQL.git"
+   "Energy" "https://github.com/Energy-Lab/main.git"
    "All" "Auto-Download"
    ); #array
 
