@@ -10,6 +10,7 @@ bash file.sh
 /--/--/--/--//--/--/--/--//--/--/--/--//--/--/--/--/
 which bash #bash directory
 bash -x file.sh  #debug mode see command and rezult
+inxi -S , cat /etc/*-release #Linux Distiribution version 
 /--/--/--/--//--/--/--/--//--/--/--/--//--/--/--/--/
 
 !File shoud always start: #!/bin/bash #!NOTE! This give abillity to call script
