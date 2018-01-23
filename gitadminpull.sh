@@ -20,6 +20,8 @@ c=("Arduino" "https://github.com/Code-Forge-Lab/Arduino.git"
    "bash" "https://github.com/Code-Forge-Lab/bash.git"
    "SQL" "https://github.com/Code-Forge-Lab/SQL.git"
    "Energy" "https://github.com/Energy-Lab/main.git"
+   "Java Frame" "https://github.com/Code-Forge-JAVA/JFrame.git"
+   "Java Android" "https://github.com/Code-Forge-JAVA/Android.git"
    "All" "Auto-Download"
    ); #array
 
