@@ -22,6 +22,7 @@ c=("Arduino" "https://github.com/Code-Forge-Lab/Arduino.git"
    "Energy" "https://github.com/Energy-Lab/main.git"
    "Java Frame" "https://github.com/Code-Forge-JAVA/JFrame.git"
    "Java Android" "https://github.com/Code-Forge-JAVA/Android.git"
+   "Java Syntax" "https://github.com/Code-Forge-JAVA/Syntax.git"
    "All" "Auto-Download"
    ); #array
 
