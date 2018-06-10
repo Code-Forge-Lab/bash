@@ -1,6 +1,6 @@
 # Bash #
 
-```unix
+```bash
 printf "Open folder.\n"
 
  - show list
