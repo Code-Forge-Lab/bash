@@ -1,9 +1,9 @@
 # Bash #
 
-
+```unix
 printf "Open folder.\n"
 
- # show list
+ - show list
 
  inc=0;  # position array
  inv=1;  # Line Position
@@ -19,11 +19,12 @@ printf "Open folder.\n"
  done
 
 
-# Read user input
+-  Read user input
 printf "Select Option: ${GREEN}"
 read input
 printf "${NC}"
- # execute job
+ - execute job -
+ 
        inc=0;  # position array
        inv=1;  # Line Position
        suc=0;  # success if find index
@@ -49,3 +50,4 @@ printf "${NC}"
        else
             printf "${RED}No rezult!${NC}\n "
        fi
+```
