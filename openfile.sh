@@ -1,8 +1,8 @@
 #!/bin/bash
 clear
 IFS=$'\n'       # Space merge activator for all for loops in script
-flashpath='/media/zick/MAIN 8GB/root/MyFolder/'
-home="/home/zick/"
+flashpath='/media/zilvinas/MAIN 8GB/root/MyFolder/'
+home="/home/zilvinas/"
 
 
 
