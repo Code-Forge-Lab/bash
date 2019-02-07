@@ -251,3 +251,13 @@ echo "Starts sleeper after 25 min";sleep 25m;echo ";Sleep in 5s"sleep 25;pm-susp
 
 --------------------------------------------------
 ================================================== 
+
+
+MySQL 
+
+Start Server
+/etc/init.d/mysql stop
+
+
+Stop Server 
+/etc/init.d/mysql start
