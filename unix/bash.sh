@@ -266,3 +266,8 @@ Start Server
 
 Stop Server 
 /etc/init.d/mysql start
+
+NANO Editor
+
+nano file.txt /// Open a file 
+nano 21 file.txt // open a file with specified line 
