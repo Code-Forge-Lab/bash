@@ -270,4 +270,4 @@ Stop Server
 NANO Editor
 
 nano file.txt /// Open a file 
-nano 21 file.txt // open a file with specified line 
+nano +21 file.txt // open a file with specified line 
