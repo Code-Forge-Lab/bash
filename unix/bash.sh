@@ -256,7 +256,7 @@ echo "Starts sleeper after 25 min";sleep 25m;echo ";Sleep in 5s"sleep 25;pm-susp
 SERVER Side
 
 Linux Server Login
-ssh root@123.45.67.890 example ssh john@root@123.45.67.890 -- After that ask password by given root user
+ssh root@123.45.67.890 example ssh john@123.45.67.890 -- After that ask password by given root user
 
 MySQL 
 
