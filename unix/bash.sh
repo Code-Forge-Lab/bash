@@ -274,3 +274,6 @@ NANO Editor
 
 nano file.txt /// Open a file 
 nano +21 file.txt // open a file with specified line 
+
+How Cach server error log Use path 
+root@debian:/var/log/apache2# tail -f
